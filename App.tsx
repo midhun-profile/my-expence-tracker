@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useMemo } from 'react';
 import ExpenseForm from './components/ExpenseForm';
 import Reports from './components/Reports';
@@ -286,6 +287,7 @@ const App: React.FC = () => {
         )}
       </main>
 
+      {/* Mobile Navigation */}
       <nav className="fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 flex justify-around p-3 md:hidden z-50 shadow-[0_-4px_10px_rgba(0,0,0,0.03)] dark:shadow-none transition-colors">
         {tabs.map((tab) => (
           <button

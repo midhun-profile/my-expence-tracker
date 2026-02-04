@@ -2,10 +2,10 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { Expense } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
-
 export const getSpendingInsights = async (expenses: Expense[]) => {
   if (expenses.length === 0) return null;
+
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
   const expenseSummary = expenses.map(e => ({
     amount: e.amount,
